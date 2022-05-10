@@ -8,12 +8,12 @@ html = requests.get(URL)
 soup = BeautifulSoup(html.text, "html.parser")
 tables = soup.find_all("table",{"class":"ctable01"})
 table = tables[1]
-asdf = table.find("tbody")
-zxcvs = asdf.find_all("td")
+#tbody = table.find("tbody") //thead에 td태그가 존재하지 않아 바로 td태그로 추출하였다.
+td = table.find_all("td")
 
-breakfasts = zxcvs[0:7]
-lunchs = zxcvs[7:14]
-dinners = zxcvs[14:21]
+breakfasts = td[0:7]
+lunchs = td[7:14]
+dinners = td[14:21]
 
 breakfast = []
 lunch = []
