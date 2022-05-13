@@ -12,3 +12,5 @@ data = {
 response = requests.post(url, data=data)
 tokens = response.json()
 print(tokens)
+print(tokens)
+print(tokens)
